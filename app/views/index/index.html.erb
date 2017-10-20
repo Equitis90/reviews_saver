@@ -1,0 +1,9 @@
+<%= form_tag index_request_handler_path do %>
+Enter requested URL here: <%= text_field_tag 'url'  %>
+<% end %>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.title, product_path(product.id) %></li>
+  <% end %>
+</ul>

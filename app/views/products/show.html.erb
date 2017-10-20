@@ -1,0 +1,11 @@
+<%= form_for '/products/show', method: :get do %>
+  Find by keyword: <%= text_field_tag 'keyword' %>
+<% end %>
+
+<% @reviews.each do |review| %>
+  <h3>Title: <%= review.title %> </h3>
+  <h4>Date: <%= review.date %> </h4>
+  <p>Author: <%= review.author %> </p>
+  <p>Comment: <%= review.comment %> </p>
+  <hr>
+<% end %>
